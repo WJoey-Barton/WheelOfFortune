@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="pane_AnchorPane"
+            prefHeight="600.0" prefWidth="850.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sceneController">
+
+    <children>
+
+        <!-- CATEGORY (Top Left) -->
+        <Label fx:id="Category_TextField"
+               layoutX="42.0" layoutY="12.0"
+               prefHeight="49.0" prefWidth="311.0"
+               styleClass="category-label" />
+
+        <!-- PUZZLE BOARD -->
+        <VBox fx:id="PuzzleBoard_VBox"
+              layoutX="5.0" layoutY="125.0"
+              prefHeight="200.0" prefWidth="500.0"
+              spacing="10.0"
+              styleClass="puzzle-board" />
+
+        <!-- WHEEL -->
+        <StackPane fx:id="Wheel_Container"
+                   layoutX="525.0" layoutY="25.0"
+                   prefHeight="320.0" prefWidth="320.0"
+                   styleClass="wheel-frame" />
+
+        <!-- RESULT LABEL -->
+        <Label fx:id="Result_Label"
+               layoutX="581.0" layoutY="361.0"
+               prefHeight="98.0" prefWidth="235.0"
+               wrapText="true" textAlignment="CENTER"
+               styleClass="result-label" />
+
+        <!-- INPUT FIELD -->
+        <TextField fx:id="userInput_TextField"
+                   layoutX="25.0" layoutY="425.0"
+                   prefHeight="25.0" prefWidth="500.0"
+                   promptText="Enter char or Solve Puzzle"
+                   styleClass="text-input" />
+
+        <!-- LETTERS GUESSED LABEL -->
+        <Label fx:id="Letters_Label"
+               layoutX="25.0" layoutY="347.0"
+               prefHeight="49.0" prefWidth="500.0"
+               wrapText="true"
+               styleClass="score-label" />
+
+        <!-- INITIALIZE GAME LABEL -->
+        <Label fx:id="Initialize_Label"
+               layoutX="148.0" layoutY="299.0"
+               text="Enter Name. Click Start Game!"
+               styleClass="score-label" />
+
+        <!-- BUTTONS -->
+        <Button fx:id="Spin_Button"
+                layoutX="620.0" layoutY="525.0"
+                prefHeight="40.0" prefWidth="150.0"
+                onAction="#SpinButton_clicked"
+                text="SPIN WHEEL"
+                styleClass="primary-button" />
+
+        <Button fx:id="GuessLetter_Button"
+                layoutX="418.0" layoutY="459.0"
+                onAction="#GuessLetterButton_clicked"
+                text="Guess a Letter"
+                styleClass="secondary-button" />
+
+        <Button fx:id="SolvePuzzle_Button"
+                layoutX="412.0" layoutY="494.0"
+                onAction="#SolvePuzzleButton_clicked"
+                text="Solve the Puzzle"
+                styleClass="secondary-button" />
+
+        <Button fx:id="StartGame_Button"
+                layoutX="620.0" layoutY="480.0"
+                prefHeight="35.0" prefWidth="140.0"
+                onAction="#StartGameButton_clicked"
+                text="Start Game"
+                styleClass="primary-button" />
+
+        <!-- PLAYER NAME INPUTS -->
+        <TextField fx:id="Player1_TextField"
+                   layoutX="21.0" layoutY="506.0"
+                   prefHeight="25.0" prefWidth="91.0"
+                   promptText="Player 1"
+                   styleClass="text-input" />
+
+        <TextField fx:id="Player2_TextField"
+                   layoutX="131.0" layoutY="506.0"
+                   prefHeight="25.0" prefWidth="91.0"
+                   promptText="Player 2"
+                   styleClass="text-input" />
+
+        <TextField fx:id="Player3_TextField"
+                   layoutX="235.0" layoutY="506.0"
+                   prefHeight="25.0" prefWidth="91.0"
+                   promptText="Player 3"
+                   styleClass="text-input" />
+
+        <!-- PLAYER SCORE LABELS -->
+        <Label fx:id="Player1_Label"
+               layoutX="25.0" layoutY="510.0"
+               text="Label"
+               styleClass="score-label" />
+
+        <Label fx:id="Player2_Label"
+               layoutX="135.0" layoutY="511.0"
+               text="Label"
+               styleClass="score-label" />
+
+        <Label fx:id="Player3_Label"
+               layoutX="240.0" layoutY="511.0"
+               text="Label"
+               styleClass="score-label" />
+
+        <!-- ACTUAL SCORE NUMBERS -->
+        <Label fx:id="score1_TextField"
+               layoutX="25.0" layoutY="533.0"
+               text="Player 1 Score"
+               styleClass="score-label" />
+
+        <Label fx:id="score2_TextField"
+               layoutX="131.0" layoutY="533.0"
+               text="Player 2 Score"
+               styleClass="score-label" />
+
+        <Label fx:id="score3_TextField"
+               layoutX="235.0" layoutY="533.0"
+               text="Player 3 Score"
+               styleClass="score-label" />
+
+    </children>
+</AnchorPane>
