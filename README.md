@@ -1,16 +1,16 @@
 
-🎡 Wheel of Fortune
+# 🎡 Wheel of Fortune
 
 A multi-player, round-based word puzzle game built with JavaFX. Compete against friends or AI to spin the wheel, guess letters, and solve hidden phrases across three dynamic rounds.
 
-🚀 Features
+## 🚀 Features
 * **Multi-player Support:** Always supports 3 players. If fewer than 3 humans join, the game automatically initializes **Computer Players** to fill the remaining slots.
 * **Dynamic Game Engine:** Manages complex turn logic, phrase progression, and state tracking using efficient `HashMap` data structures.
 * **Interactive GUI:** A polished JavaFX interface featuring a puzzle board, an interactive wheel, and real-time score tracking.
 * **AI Opponents:** Computer players can spin and guess letters, providing a challenging solo or duo experience.
 * **Automated Logging:** Tracks "Bankrupt" and "Lose-a-Turn" states instantly through the backend engine.
 
-🛠 Technical Architecture
+## 🛠 Technical Architecture
 
 The project follows a decoupled architecture to separate game logic from the visual interface:
 
@@ -19,7 +19,7 @@ The project follows a decoupled architecture to separate game logic from the vis
 * **Phrase & LetterSquare:** The puzzle is broken down into a `PhraseLayout` grid, where individual `LetterSquare` objects manage the visibility of hidden characters.
 * **Player vs. PlayerState:** `Player` stores persistent data (name, total points), while `PlayerState` handles volatile round data (current turn status, bankrupt status).
 
-🎮 How to Play
+## 🎮 How to Play
 
 1.  **Setup:** Launch the application and enter names for the human players. Any empty slots will be filled by AI.
 2.  **The Turn:** When your name is highlighted, click the **Wheel** to spin.
